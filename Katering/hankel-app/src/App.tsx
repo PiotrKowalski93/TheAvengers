@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import axios from 'axios';
 
 const logo = require('./photos/mainPhoto.jpeg');
 
@@ -71,9 +72,22 @@ class AboutTab extends React.Component{
 }
 
 class ProfileTab extends React.Component{
+  getData():string{
+    axios.get('//192.168.1.23:60040/api/menu')
+    .then(function (response) {
+      console.log('testG' + response);
+      return response;
+    })
+    .catch(function (error) {
+      console.log('error' + error);
+    });
+    return '';
+  }
   render(){
+    var testGosia = this.getData();
     return(
       <div>
+        {testGosia}
       </div>
     );
   }

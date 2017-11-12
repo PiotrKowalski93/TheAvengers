@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/reactstrap": "^4.6.4",
+    "axios": "^0.17.1",
     "bootstrap": "^4.0.0-beta.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -14,7 +15,9 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "postinstall": "npm run typings",
+    "typings": "typings install"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.3",
